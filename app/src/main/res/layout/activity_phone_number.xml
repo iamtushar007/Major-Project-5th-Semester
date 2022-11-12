@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="265dp"
-        android:layout_height="256dp"
+        android:layout_width="247dp"
+        android:layout_height="193dp"
         android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/mobile_auth1" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/phoneLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -41,9 +41,9 @@
         android:gravity="center"
         android:text="Lets Chat App will send an SMS to verify your number"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintEnd_toEndOf="@+id/phoneLabel"
+        app:layout_constraintStart_toStartOf="@+id/phoneLabel"
+        app:layout_constraintTop_toBottomOf="@+id/phoneLabel" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -70,9 +70,9 @@
                 android:background="@drawable/textbox_outline"
                 android:ems="10"
                 android:hint="Enter your phone number"
-                android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:phoneNumber="true" />
 
             <Button
                 android:id="@+id/continueButton"

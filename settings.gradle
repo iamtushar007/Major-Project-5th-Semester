@@ -5,6 +5,7 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+
     }
 }
 dependencyResolutionManagement {
@@ -14,6 +15,7 @@ dependencyResolutionManagement {
         mavenCentral()
         jcenter()
         maven { url "https://jitpack.io" }
+
     }
 }
 rootProject.name = "Lets Chat"
