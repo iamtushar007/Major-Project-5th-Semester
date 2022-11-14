@@ -20,13 +20,13 @@ public class PhoneNumberActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        binding.phoneBox.requestFocus();
+        binding.nameBox.requestFocus();
 
         binding.continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(PhoneNumberActivity.this,OTPActivity.class);
-                intent.putExtra("phoneNumber",binding.phoneBox.getText().toString());
+                intent.putExtra("phoneNumber",binding.nameBox.getText().toString());
                 startActivity(intent);
             }
         });
