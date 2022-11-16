@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#A4DAF3</color>
     <color name="black1">#0E0E0E</color>
+    <color name="green">#22D329</color>
+    <color name="greendark">#036307</color>
 </resources>
