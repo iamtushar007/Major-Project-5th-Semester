@@ -1,4 +1,4 @@
-package com.example.letschat;
+package com.example.letschat.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
