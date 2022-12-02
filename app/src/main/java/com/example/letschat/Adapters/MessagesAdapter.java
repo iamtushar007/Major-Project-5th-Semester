@@ -31,13 +31,13 @@ public class MessagesAdapter extends RecyclerView.Adapter{
 
 
     String senderRoom;
-    String recieverRoom;
+    String receiverRoom;
 
-    public MessagesAdapter(Context context, ArrayList<Message> messages,String senderRoom,String recieverRoom){
+    public MessagesAdapter(Context context, ArrayList<Message> messages,String senderRoom,String receiverRoom){
         this.context=context;
         this.messages=messages;
         this.senderRoom=senderRoom;
-        this.recieverRoom=recieverRoom;
+        this.receiverRoom = receiverRoom;
     }
 
 
@@ -87,6 +87,10 @@ public class MessagesAdapter extends RecyclerView.Adapter{
 
 
         ReactionPopup popup = new ReactionPopup(context, config, (pos) -> {
+
+            if(pos<0)
+                return false;
+
             if(holder.getClass()==SentViewHolder.class)
             {
                 SentViewHolder viewHolder=(SentViewHolder) holder;
@@ -111,7 +115,7 @@ public class MessagesAdapter extends RecyclerView.Adapter{
 
             FirebaseDatabase.getInstance().getReference()
                     .child("chats")
-                    .child(recieverRoom)
+                    .child(receiverRoom)
                     .child("messages")
                     .child(message.getMessageId()).setValue(message);
 
